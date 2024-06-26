@@ -14,23 +14,21 @@ class Game
     @current_player = player1
 
   def switch_player
-    if @current_player = player1
-      @current_player = player2
-    end
-    if @current_player = player2
-      @current_player = player1
-    end
+    @current_player = @current_player == @player1 ? @player2 : @player1
   end
 
   def start
-    # Ask a question "#{@current_player} what is _ + _" and gets.chomp input
+    # ask_question
     # Check if the input matches the correct answer
     # Puts message
-    # Call lose_life if needed
+    # Call lose_life if needed -> a player method
     # Print current lives
-    # Switch player
+    # switch_player
   end
 
+  def ask_question
+    # Ask a question "#{@current_player} what is _ + _" and gets.chomp input
+  end 
 
 end
 
