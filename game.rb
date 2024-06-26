@@ -18,16 +18,26 @@ class Game
   end
 
   def start
-    # ask_question
-    # Check if the input matches the correct answer
-    # Puts message
-    # Call lose_life if needed -> a player method
+    ask_question
+
     # Print current lives
-    # switch_player
+    puts "Lives remaining: #{@current_player.lives}"
+    switch_player
   end
 
   def ask_question
-    # Ask a question "#{@current_player} what is _ + _" and gets.chomp input
+    num1 = rand(1..20)
+    num2 = rand(1..20)
+    correct_answer = num1 + num2
+
+    puts "#{@current_player.name}: What does #{num1} + #{num2} equal?"
+    player_answer = gets.chomp.to_i
+
+    if player_answer == correct_answer
+      puts "Correct!"
+    else
+      puts "Incorrect. The correct answer was #{correct_answer}."
+      @current_player.lose_life
   end 
 
 end
