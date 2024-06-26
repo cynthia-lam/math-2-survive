@@ -12,6 +12,7 @@ class Game
     @player2 = Player.new(p2_name)
 
     @current_player = player1
+  end
 
   def switch_player
     @current_player = @current_player == @player1 ? @player2 : @player1
@@ -22,6 +23,7 @@ class Game
 
     # Print current lives
     puts "Lives remaining: #{@current_player.lives}"
+    
     switch_player
   end
 
@@ -38,6 +40,7 @@ class Game
     else
       puts "Incorrect. The correct answer was #{correct_answer}."
       @current_player.lose_life
+    end
   end 
 
 end
