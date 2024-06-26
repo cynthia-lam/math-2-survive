@@ -1,4 +1,5 @@
 require './player'
 require './game'
 
-start = Game.new
+game = Game.new
+game.start()
