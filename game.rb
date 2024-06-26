@@ -20,13 +20,18 @@ class Game
 
   def start
     until game_over?
+    puts "-----NEW TURN-----"
+    
     ask_question
 
     # Print current lives
     puts "Lives remaining: #{@current_player.lives}"
-    puts "-----NEW TURN-----"
+    
     switch_player
     end
+
+    puts "-----GAME OVER-----"
+    puts "#{@current_player.name} has died!"
   end
 
   def ask_question
