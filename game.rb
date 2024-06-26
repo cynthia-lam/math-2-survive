@@ -20,6 +20,7 @@ class Game
 
   def start
     until game_over?
+    puts ""
     puts "-----NEW TURN-----"
     
     ask_question
