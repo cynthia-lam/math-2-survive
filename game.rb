@@ -23,7 +23,7 @@ class Game
 
     # Print current lives
     puts "Lives remaining: #{@current_player.lives}"
-    
+    puts "-----NEW TURN-----"
     switch_player
   end
 
@@ -42,6 +42,10 @@ class Game
       @current_player.lose_life
     end
   end 
+
+  def game_over?
+    !@player1.alive? || !@player2.alive?
+  end
 
 end
 
