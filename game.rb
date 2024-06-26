@@ -13,7 +13,7 @@ class Game
 
     @current_player = player1
 
-  def change_turn
+  def switch_player
     if @current_player = player1
       @current_player = player2
     end
@@ -21,4 +21,17 @@ class Game
       @current_player = player1
     end
   end
+
+  def start
+    # Ask a question "#{@current_player} what is _ + _" and gets.chomp input
+    # Check if the input matches the correct answer
+    # Puts message
+    # Call lose_life if needed
+    # Print current lives
+    # Switch player
+  end
+
+
 end
+
+
