@@ -1,9 +1,13 @@
 class Player
-  attr_accessor :name, :points
+  attr_accessor :name, :lives
 
   def initialize(name)
     @name = name
-    @points = 3
+    @lives = 3
+  end
+
+  def lose_life
+    @lives -= 1
   end
 
 end
