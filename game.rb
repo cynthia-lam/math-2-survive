@@ -11,7 +11,7 @@ class Game
     p2_name = $stdin.gets.chomp
     @player2 = Player.new(p2_name)
 
-    @current_player = player1
+    @current_player = @player1
   end
 
   def switch_player
